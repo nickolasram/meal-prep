@@ -1,4 +1,7 @@
-import {MongoClient} from 'mongodb';
+"use server";
+
+import {MongoClient} from "mongodb";
+
 const uri = process.env.NEXT_PUBLIC_MONGODB
 const options = {
     useUnifiedTopology: true,
@@ -27,5 +30,6 @@ async function readProjects() {
     } finally {
         await mongoClient.close();
     }
+    return null
 }
 export default readProjects;
