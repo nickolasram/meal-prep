@@ -88,7 +88,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     env:
-      NEXT_PUBLIC_MONGODB: ${{ secrets.NEXT_PUBLIC_MONGODB }}
+      NEXT_PUBLIC_MONGODB: '123'
     needs: build
     steps:
       - name: Deploy to GitHub Pages
